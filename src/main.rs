@@ -9,6 +9,8 @@ mod tests {
 
     #[test]
     fn test_log(){
+        env_logger::init();
+
         error!("This is an error");
         warn!("This is a warning");
         info!("This is an info");
