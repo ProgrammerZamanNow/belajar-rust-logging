@@ -9,7 +9,7 @@ mod tests {
 
     #[test]
     fn test_log(){
-        env_logger::init();
+        log4rs::init_file("log4rs.yaml", Default::default()).unwrap();
 
         error!("This is an error");
         warn!("This is a warning");
